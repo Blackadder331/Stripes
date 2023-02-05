@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;700&display=swap');
+
+* { 
+    box-sizing: border-box; 
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+:root {
+    --stripes-size: 110px;
+    font-size: 15px;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+p, a{
+    font-weight: 800;
+    font-size: 1rem;
+    color: black;
+}
+
+a{
+    color: #bd0d0d;
+}
+
+.container {
+    position: absolute;
+    z-index: 2;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 50%;
+    border: 30px solid black;
+    aspect-ratio: 1 / 1.618;
+    /* text-align: center; */
+    padding: 5rem;
+    
+}
+  
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+  
+.stripes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.stripes::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: calc(100% + var(--stripes-size));
+    background: repeating-linear-gradient(45deg, black 25%, black 50%, white 50%, white 75%);
+    background-size: var(--stripes-size) var(--stripes-size);
+    -webkit-animation: animateStripes 3s linear infinite;
+            animation: animateStripes 3s linear infinite;
+}
+  
+@-webkit-keyframes animateStripes {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-110px);
+    }
+}
+  
+@keyframes animateStripes {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-110px);
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+  
+html {
+    position: relative;
+    min-height: 100%;
+    font-size: 62.5%;
+}
+
+html body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.profile {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    margin-bottom: 1.25rem;
+    background-color: red;
+    background-image: url(./images/meg.png);
+    background-position: center;
+    background-size: cover;
+    background-size: 110%;
+}
+
+.stats {
+    margin-top: 1rem;
+}
